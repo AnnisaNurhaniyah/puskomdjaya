@@ -1,5 +1,5 @@
 ---
-title: About The Author
+title: Tentang Pusat Komando Ketahanan Pangan 
 image: /images/author.png
 description: "meta description"
 layout: about

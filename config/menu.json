@@ -1,23 +1,23 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Beranda",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Tentang",
       "url": "/about"
     },
     {
-      "name": "Elements",
+      "name": "Karir",
       "url": "/elements"
     },
     {
-      "name": "Contact",
+      "name": "Kontak",
       "url": "/contact"
     },
     {
-      "name": "Pages",
+      "name": "Program",
       "url": "",
       "hasChildren": true,
       "children": [
@@ -30,15 +30,15 @@
   ],
   "footer": [
     {
-      "name": "Home",
+      "name": "Beranda",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Tentang",
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "Kontak",
       "url": "/contact"
     },
     {

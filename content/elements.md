@@ -1,20 +1,6 @@
 ---
-title: "Elements"
+title: "PUSAT KOMANDO MEMANGGIL ANDA"
 draft: false
----
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
 ---
 
 ### Paragraph
@@ -22,6 +8,8 @@ draft: false
 Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and ships.
 
 Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and ships.
+
+<Button href="#" type="solid">DAFTAR</Button>
 
 ---
 
@@ -126,12 +114,6 @@ Some text to show that the reference links can follow later.
   document.querySelector(".preloader").style.display = "none";
 })`}
 </Code>
-
----
-
-### Button
-
-<Button href="#" type="solid">Button</Button>
 
 ---
 
