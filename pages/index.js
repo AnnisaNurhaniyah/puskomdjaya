@@ -1,9 +1,9 @@
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import ImageFallback from "@layouts/components/ImageFallback";
-import Pagination from "@layouts/components/Pagination";
+// import Pagination from "@layouts/components/Pagination";
 import Post from "@layouts/partials/Post";
-import Sidebar from "@layouts/partials/Sidebar";
+// import Sidebar from "@layouts/partials/Sidebar";
 import { getListPage, getSinglePage } from "@lib/contentParser";
 import { getTaxonomy } from "@lib/taxonomyParser";
 import dateFormat from "@lib/utils/dateFormat";
@@ -31,7 +31,7 @@ const Home = ({
   return (
     <Base>
       {/* Banner */}
-      <section className="section banner relative pb-0">
+      <section className="section banner relative pb-0" id="banner">
         <ImageFallback
           className="absolute bottom-0 left-0 z-[-1] w-full"
           src={"/images/banner-bg-shape.svg"}
@@ -46,18 +46,8 @@ const Home = ({
             <div className={banner.image_enable ? "mt-12 text-center lg:mt-0 lg:text-left lg:col-6" : "mt-12 text-center lg:mt-0 lg:text-left lg:col-12"}>
               <div className="banner-title">
                 {markdownify(banner.title, "h1")}
-                {markdownify(banner.title_small, "span")}
               </div>
               {markdownify(banner.content, "p", "mt-4")}
-              {banner.button.enable && (
-                  <Link
-                    className="btn btn-primary mt-6"
-                    href={banner.button.link}
-                    rel={banner.button.rel}
-                  >
-                    {banner.button.label}
-                  </Link>
-              )}
             </div>
             {banner.image_enable && (
                 <div className="col-9 lg:col-6">
@@ -79,7 +69,41 @@ const Home = ({
       <section className="section">
         <div className="container">
           <div className="row items-start">
-            <div className="mb-12 lg:mb-0 lg:col-8">
+            <div className="mb-12 lg:mb-0 lg:col-12">
+              
+              {/* /* Produk Unggulan*/}
+            {promotion.enable && (
+                  <div className="section">
+                     {markdownify(promotion.title, "h2", "section-title")}
+                     <div className="rounded border border-border p-6 dark:border-darkmode-border">
+                      <div className="container">
+          <div className="row flex-wrap-reverse items-center justify-center lg:flex-row">
+            <div className={promotion.image_enable ? "mt-12 text-center lg:mt-0 lg:text-left lg:col-6" : "mt-12 text-center lg:mt-0 lg:text-left lg:col-12"}>
+              <div className="promotion-title">
+                {markdownify(promotion.title2, "h1")}
+              </div>
+              {markdownify(promotion.content, "p", "mt-4")}
+            </div>
+            {promotion.image_enable && (
+                <div className="col-9 lg:col-6">
+                  <ImageFallback
+                    className="mx-auto object-contain"
+                    src={promotion.image}
+                    width={150}
+                    height={150}
+                    priority={true}
+                    alt="product Image"
+                  />
+                </div>
+            )}
+          </div>
+        </div>
+                    </div>
+                  </div>
+                )
+              }
+
+
               {/* Featured posts */}
               {featured_posts.enable && (
                 <div className="section">
@@ -130,9 +154,10 @@ const Home = ({
                   </div>
                 </div>
               )}
-
+      
+              
               {/* Promotion */}
-              {promotion.enable && (
+              {/* {promotion.enable && (
                 <Link href={promotion.link} className="section block pt-0">
                   <ImageFallback
                     className="h-full w-full"
@@ -142,10 +167,10 @@ const Home = ({
                     alt="promotion"
                   />
                 </Link>
-              )}
+              )} */}
 
               {/* Recent Posts */}
-              {recent_posts.enable && (
+              {/* {recent_posts.enable && (
                 <div className="section pt-0">
                   {markdownify(recent_posts.title, "h2", "section-title")}
                   <div className="rounded border border-border px-6 pt-6 dark:border-darkmode-border">
@@ -158,19 +183,19 @@ const Home = ({
                     </div>
                   </div>
                 </div>
-              )}
+              )} */}
 
-              <Pagination
+              {/* <Pagination
                 totalPages={Math.ceil(posts.length / showPosts)}
                 currentPage={1}
-              />
+              /> */}
             </div>
             {/* sidebar */}
-            <Sidebar
+            {/* <Sidebar
               className={"lg:mt-[9.5rem]"}
               posts={posts}
               categories={categories}
-            />
+            /> */}
           </div>
         </div>
       </section>
