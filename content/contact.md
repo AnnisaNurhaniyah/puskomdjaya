@@ -1,9 +1,9 @@
 ---
-title: "Let’s, Talk </br> About You"
+title: "Ayo, Kirim Masukan & Sarannya!"
 description: "meta description"
-phone: "+211234565523"
-mail: "info@email.com"
-location: "9567 Turner Trace Apt. BC C3G8A4"
+phone: "022-87327711"
+mail: "dkppjabarprov.go.id"
+location: "Jl. Kawaluyaan Indah Raya No.6 Lt.5 Soekarno-Hatta"
 form_action: "#"
 layout: "contact"
 addresses:
@@ -11,8 +11,8 @@ addresses:
     content: +211234565523
     link: tel:+211234565523
   - icon: FaMapMarkerAlt
-    content: info@email.com
-    link: mailto:info@email.com
+    content: dkppjabarprov.go.id
+    link: mailto:dkppjabarprov.go.id
   - icon: FaLocation
     content: 9567 Turner Trace Apt. BC C3G8A4
 

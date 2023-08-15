@@ -17,7 +17,7 @@ draft: false
 
 ---
 
-### Paragraph
+### Data Quality Analyst
 
 Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once. We have a saboteur aboard. We know you’re dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Could someone survive inside a transporter buffer for 75 years? Fate. It protects fools, little children, and ships.
 
@@ -131,7 +131,7 @@ Some text to show that the reference links can follow later.
 
 ### Button
 
-<Button href="#" type="solid">Button</Button>
+<Button href="https://docs.google.com/forms/d/e/1FAIpQLScR6AGU3FGrk7rAnZ9bbvoeOY92zfn30UZbLs0vMgB_U50uaQ/viewform" type="solid">Daftar Disini</Button>
 
 ---
 
