@@ -28,9 +28,9 @@ const Contact = ({ data }) => {
           </div>
           <div className="contact-form-wrapper rounded border border-border p-6 dark:border-darkmode-border lg:col-6">
             <h2>
-              Send Us A
+              Kritik & Saran
               <span className="ml-1.5 inline-flex items-center text-primary">
-                Message
+                
                 <BsArrowRightShort />
               </span>
             </h2>
@@ -41,7 +41,7 @@ const Contact = ({ data }) => {
             >
               <div className="mb-6">
                 <label className="mb-2 block font-secondary" htmlFor="name">
-                  Full name
+                  Nama
                   <small className="font-secondary text-sm text-primary">
                     *
                   </small>
@@ -50,13 +50,13 @@ const Contact = ({ data }) => {
                   className="form-input w-full"
                   name="name"
                   type="text"
-                  placeholder="Thomas Milano"
+                  placeholder="Marco"
                   required
                 />
               </div>
               <div className="mb-6">
                 <label className="mb-2 block font-secondary" htmlFor="email">
-                  Email Address
+                  Email 
                   <small className="font-secondary text-sm text-primary">
                     *
                   </small>
@@ -86,7 +86,7 @@ const Contact = ({ data }) => {
               </div>
               <div className="mb-6">
                 <label className="mb-2 block font-secondary" htmlFor="message">
-                  Your Message Here
+                  Pesan
                   <small className="font-secondary text-sm text-primary">
                     *
                   </small>
