@@ -1,6 +1,5 @@
 {
   "site": {
-    "title": "PUSAT KOMANDO KETAHANAN PANGAN JABAR",
     "title": "PUSAT KOMANDO KETAHANAN PANGAN JAWA BARAT",
     "base_url": "/",
     "favicon": "/images/ICON.ico",
@@ -9,12 +8,6 @@
     "logo_width": "255",
     "logo_height": "50",
     "logo_text": "PUSKOM"
-    "favicon": "/images/favicon.ico",
-    "logo": "/images/logo.png",
-    "logo_white": "/images/logo-light.png",
-    "logo_width": "150",
-    "logo_height": "39",
-    "logo_text": "Geeky"
   },
   "settings": {
     "theme_switcher": true,
