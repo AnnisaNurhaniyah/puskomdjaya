@@ -3,10 +3,28 @@ import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 import { FaEnvelope, FaMapMarkerAlt, FaUserAlt } from "react-icons/fa";
 import ImageFallback from "./components/ImageFallback";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
+
+
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, form_action, phone, mail, location } = frontmatter;
+
+  const form = useRef();
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_h55xidl', 'template_5f19leo', form.current, 'NNQKLwBbAIMKZYNiV')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+    };
 
   return (
     <section className="section lg:mt-16">
@@ -35,9 +53,9 @@ const Contact = ({ data }) => {
               </span>
             </h2>
             <form
+            ref={form} onSubmit={sendEmail}
               className="contact-form mt-12"
-              method="POST"
-              action={form_action}
+              
             >
               <div className="mb-6">
                 <label className="mb-2 block font-secondary" htmlFor="name">
@@ -50,7 +68,7 @@ const Contact = ({ data }) => {
                   className="form-input w-full"
                   name="name"
                   type="text"
-                  placeholder="Marco"
+                  placeholder="Widya"
                   required
                 />
               </div>
@@ -65,7 +83,7 @@ const Contact = ({ data }) => {
                   className="form-input w-full"
                   name="email"
                   type="email"
-                  placeholder="example@gmail.com"
+                  placeholder="widya@gmail.com"
                   required
                 />
               </div>
@@ -80,7 +98,7 @@ const Contact = ({ data }) => {
                   className="form-input w-full"
                   name="subject"
                   type="text"
-                  placeholder="Blog advertisement"
+                  placeholder=""
                   required
                 />
               </div>
@@ -92,8 +110,9 @@ const Contact = ({ data }) => {
                   </small>
                 </label>
                 <textarea
+                  name="message"
                   className="form-textarea w-full"
-                  placeholder="Hello I’m Mr ‘x’ from………….."
+                  placeholder="Halo saya widya………….."
                   rows="7"
                 />
               </div>

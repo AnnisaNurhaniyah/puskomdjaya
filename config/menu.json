@@ -6,7 +6,11 @@
     },
     {
       "name": "Tentang",
-      "url": "/about"
+      "url": "#about"
+    },
+    {
+      "name": "Artikel",
+      "url": "#blog"
     },
     {
       "name": "Karir",
@@ -18,7 +22,7 @@
     },
     {
       "name": "Program",
-      "url": "",
+      "url": "#program",
       "hasChildren": true,
       "children": [
         {

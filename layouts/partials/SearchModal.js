@@ -29,7 +29,7 @@ const SearchModal = ({ searchModal, setSearchModal }) => {
         type="text"
         className="form-input bg-body placeholder:text-base dark:bg-darkmode-body"
         id="searchModal"
-        placeholder="Type and hit enter..."
+        placeholder="Ketik dan tekan enter..."
         onChange={(e) => setInput(e.target.value)}
       />
     </div>

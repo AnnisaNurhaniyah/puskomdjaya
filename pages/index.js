@@ -11,6 +11,7 @@ import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 import { FaRegCalendar } from "react-icons/fa";
+import Accordion from "@layouts/shortcodes/Accordion";
 const { blog_folder, pagination } = config.settings;
 
 const Home = ({
@@ -70,10 +71,19 @@ const Home = ({
         <div className="container">
           <div className="row items-start">
             <div className="mb-12 lg:mb-0 lg:col-12">
+
+              {/* Tentang */}
+              {recent_posts.enable && (
+                <div className="section" id="about">
+                {markdownify(recent_posts.title, "h2", "section-title")}
+                <Accordion />
+                </div>
+              )}
+              
               
               {/* /* Produk Unggulan*/}
             {promotion.enable && (
-                  <div className="section">
+                  <div className="section" id="program">
                      {markdownify(promotion.title, "h2", "section-title")}
                      <div className="rounded border border-border p-6 dark:border-darkmode-border">
                       <div className="container">
@@ -99,14 +109,16 @@ const Home = ({
           </div>
         </div>
                     </div>
+                    
                   </div>
                 )
               }
 
+            
 
               {/* Featured posts */}
               {featured_posts.enable && (
-                <div className="section">
+                <div className="section" id="blog">
                   {markdownify(featured_posts.title, "h2", "section-title")}
                   <div className="rounded border border-border p-6 dark:border-darkmode-border">
                     <div className="row">
