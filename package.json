@@ -12,6 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "disqus-react": "^1.1.5",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
