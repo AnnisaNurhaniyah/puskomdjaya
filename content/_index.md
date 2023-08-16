@@ -28,7 +28,7 @@ promotion:
   content: SIMAWAS PAGI merupakan produk inovasi dari Pusat Komando Ketahanan Pangan Jawa Barat yang berupaya secara integratif menjadi penyokong terwujudnya Ketahanan Pangan dan Gizi yang Berkelanjutan melalui terobosan teknologi informasi, serta transformasi data digital.
 
 recent_posts:
-  title: Recent Posts
+  title: Tentang Kami
   enable: true
 
 ---
