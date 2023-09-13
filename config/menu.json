@@ -30,6 +30,10 @@
           "url": "https://simawas.jabarprov.go.id/"
         }
       ]
+    },
+    {
+      "name": "Log in",
+      "url": "../login"
     }
   ],
   "footer": [
