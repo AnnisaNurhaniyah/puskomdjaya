@@ -1,0 +1,116 @@
+// CREATE A USER
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "name": "Widya Sabina",
+    "email": "widya@gmail.com",
+    "password": "wiwid123",
+    "confPassword": "wiwid123",
+    "role": "user"
+}
+
+###
+// GET ALL USERS
+GET http://localhost:8000/users
+
+###
+// GET SINGLE USER
+GET http://localhost:8000/users/caca7d23-d809-465e-bd72-0463836b9ca7
+
+###
+// UPDATE A USER
+PATCH  http://localhost:8000/users/caca7d23-d809-465e-bd72-0463836b9ca7
+Content-Type: application/json
+
+{
+    "name": "Annisa Nurhaniyah Iskandar",
+    "email": "annisa@gmail.com",
+    "password": "icha1919",
+    "confPassword": "icha1919",
+    "role": "admin"
+}
+
+###
+//DELETE A USER
+DELETE http://localhost:8000/users/bb8cbf3b-8e88-4e49-ac95-549cf0da235a
+
+###
+// LOGIN
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+    "email": "annisanur@gmail.com",
+    "password": "p@ssword"
+}
+
+###
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+    "email": "widyas@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:8000/me
+
+###
+DELETE http://localhost:8000/logout
+
+
+###
+// GET ALL ARTICLE
+GET http://localhost:8000/articles
+
+###
+// GET SINGLE ARTICLE
+GET http://localhost:8000/articles
+
+###
+// POST DATA ARTICLE
+POST http://localhost:8000/articles
+Content-Type: application/json
+
+{
+    "title": "Judul 02",
+    "desc": "Ini adalah artikel yang kedua dibuat oleh user",
+    "photo": ""
+}
+
+###
+// UPDATE DATA ARTICLE
+PATCH http://localhost:8000/articles/
+Content-Type: application/json
+
+{
+    "title": "Judul 01",
+    "desc": "Ini adalah artikel pertama yang telah direvisi kembali"
+}
+
+###
+//DELETE A ARTICLE
+DELETE http://localhost:8000/articles
+
+###
+// GET ALL RECRUITMENT
+GET http://localhost:8000/recruitments
+
+###
+// GET SINGLE RECRUITMENT
+GET http://localhost:8000/recruitments
+
+###
+// UPDATE DATA RECRUITMENT
+PATCH http://localhost:8000/recruitments/
+Content-Type: application/json
+
+{
+    "status": ""
+}
+
+###
+//DELETE A RECRUITMENT
+DELETE http://localhost:8000/recruitments
