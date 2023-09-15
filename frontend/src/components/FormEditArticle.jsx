@@ -5,6 +5,8 @@ import { useNavigate, useParams } from "react-router-dom";
 const FormEditArticle = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [file, setFile] = useState("");
+  const [preview, setPreview] = useState("");
   const [msg, setMsg] = useState("");
   const navigate = useNavigate();
   const { id } = useParams();
@@ -17,6 +19,8 @@ const FormEditArticle = () => {
         );
         setTitle(response.data.title);
         setDesc(response.data.desc);
+        setFile(response.data.image);
+        setPreview(response.data.url);
       } catch (error) {
         if (error.response) {
           setMsg(error.response.data.msg);
@@ -26,18 +30,42 @@ const FormEditArticle = () => {
     getArticleById();
   }, [id]);
 
+  const loadImage = (e) => {
+    const image = e.target.files[0];
+    setFile(image);
+    setPreview(URL.createObjectURL(image));
+  };
+
+  // const updateArticle = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await axios.patch(`http://localhost:8000/articles/${id}`, {
+  //       title: title,
+  //       desc: desc
+  //     });
+  //     navigate("/articles");
+  //   } catch (error) {
+  //     if (error.response) {
+  //       setMsg(error.response.data.msg);
+  //     }
+  //   }
+  // };
+
   const updateArticle = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("title", title);
+    formData.append("desc", desc);
     try {
-      await axios.patch(`http://localhost:8000/articles/${id}`, {
-        title: title,
-        desc: desc
+      await axios.patch(`http://localhost:8000/articles/${id}`, formData, {
+        headers: {
+          "Content-type": "multipart/form-data",
+        },
       });
-      navigate("/articles");
+      navigate("/");
     } catch (error) {
-      if (error.response) {
-        setMsg(error.response.data.msg);
-      }
+      console.log(error);
     }
   };
 
@@ -74,6 +102,29 @@ const FormEditArticle = () => {
                   />
                 </div>
               </div>
+              <div className="field">
+                <label className="label">Foto</label>
+                <div className="control">
+                  <input
+                    type="file"
+                    className="file-input"
+                    onChange={loadImage}
+                    // value={image}
+                    // onChange={(e) => setImage(e.target.value)}
+                  />
+                  <span className="file-cta">
+                    <span className="file-label">Choose a file...</span>
+                  </span>
+                </div>
+              </div>
+
+              {preview ? (
+            <figure className="image is-128x128">
+              <img src={preview} alt="Preview Image" />
+            </figure>
+          ) : (
+            ""
+          )}
 
               <div className="field">
                 <div className="control">

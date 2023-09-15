@@ -1,4 +1,5 @@
 import express from "express";
+import FileUpload from "express-fileupload";
 import cors from "cors";
 import session from "express-session";
 import dotenv from "dotenv";
@@ -34,9 +35,11 @@ app.use(session({
 
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3000'
+    origin: 'http://localhost:3001'
 }));
 app.use(express.json());
+app.use(FileUpload());
+app.use(express.static("public"));
 app.use(UserRoute);
 app.use(ArticleRoute);
 app.use(RecruitmentRoute);

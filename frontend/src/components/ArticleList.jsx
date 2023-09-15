@@ -32,6 +32,7 @@ const ArticleList = () => {
             <th>No</th>
             <th>Judul Artikel</th>
             <th>Isi</th>
+            <th>Foto</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -41,6 +42,7 @@ const ArticleList = () => {
               <td>{index + 1}</td>
               <td>{article.title}</td>
               <td>{article.desc}</td>
+              <td>{article.image}</td>
               <td>
                 <Link
                   to={`/articles/edit/${article.uuid}`}

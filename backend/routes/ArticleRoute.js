@@ -2,7 +2,7 @@ import express from "express";
 import {
     getArticles,
     getArticleById,
-    createArticle,
+    saveArticle,
     updateArticle,
     deleteArticle
 } from "../controllers/Articles.js";
@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.get('/articles', verifyUser, getArticles);
 router.get('/articles/:id', verifyUser, getArticleById);
-router.post('/articles', verifyUser, createArticle);
+router.post('/articles', verifyUser, saveArticle);
 router.patch('/articles/:id', verifyUser, updateArticle);
 router.delete('/articles/:id', verifyUser, deleteArticle);
 

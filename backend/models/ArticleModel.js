@@ -29,6 +29,8 @@ const Articles = db.define('article',{
             len: [10, 1000]
         }
     },
+    image: DataTypes.STRING,
+    url: DataTypes.STRING,
     userId:{
         type: DataTypes.INTEGER,
         allowNull: false,
