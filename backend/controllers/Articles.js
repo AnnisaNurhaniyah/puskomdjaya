@@ -1,6 +1,7 @@
 import Article from "../models/ArticleModel.js";
 import User from "../models/UserModel.js"
 import {Op} from "sequelize";
+import path from  "path";
 
 export const getArticles = async(req, res) => {
     try {
@@ -87,6 +88,7 @@ export const getArticleById = async (req, res) => {
 export const saveArticle = (req, res)=>{
     if(req.files === null) return res.status(400).json({msg: "No File Uploaded"});
     const title = req.body.title;
+    const userId = req.body.userId;
     const desc = req.body.desc;
     const file = req.files.file;
     const fileSize = file.data.length;
@@ -101,7 +103,7 @@ export const saveArticle = (req, res)=>{
     file.mv(`./public/images/${fileName}`, async(err)=>{
         if(err) return res.status(500).json({msg: err.message});
         try {
-            await Product.create({title: title, desc: desc, image: fileName, url: url});
+            await Article.create({title: title, desc: desc, image: fileName, url: url, userId: userId});
             res.status(201).json({msg: "Article Created Successfuly"});
         } catch (error) {
             console.log(error.message);

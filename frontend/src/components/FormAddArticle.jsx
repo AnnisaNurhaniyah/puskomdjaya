@@ -34,6 +34,7 @@ const FormAddArticle = () => {
   const saveArticle = async (e) => {
     e.preventDefault();
     const formData = new FormData();
+    formData.append("userId", 1);
     formData.append("file", file);
     formData.append("title", title);
     
